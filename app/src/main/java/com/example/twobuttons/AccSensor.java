@@ -2,6 +2,7 @@ package com.example.twobuttons;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -15,6 +16,7 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -22,6 +24,7 @@ import java.util.NoSuchElementException;
 
 public class AccSensor extends AppCompatActivity implements SensorEventListener {
     private TextView xTextView, yTextView, zTextView, directionText;
+    private ConstraintLayout view;
     private SensorManager sensorManager;
     private Sensor accelerometerSensor;
     private boolean isAccelerometerAvailable, itIsNotFirstTime = false;
@@ -54,6 +57,7 @@ public class AccSensor extends AppCompatActivity implements SensorEventListener 
         yTextView = findViewById(R.id.Y);
         zTextView = findViewById(R.id.Z);
         directionText = findViewById(R.id.directionText);
+        view = (ConstraintLayout) findViewById(R.id.acc_sensor);
 
 
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -108,6 +112,7 @@ public class AccSensor extends AppCompatActivity implements SensorEventListener 
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     AlertDialog.Builder shaking = new AlertDialog.Builder(this);
+                    AlertDialog test = shaking.create();
 
                     shaking.setMessage("You're shaking me! I'll vibrate every time you do that.");
                     shaking.setTitle("Weee");
@@ -116,6 +121,10 @@ public class AccSensor extends AppCompatActivity implements SensorEventListener 
                         shaking.show();
                         alertIsShowing = true;
                     }
+
+
+
+
 
 
 

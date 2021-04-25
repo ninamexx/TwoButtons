@@ -103,13 +103,13 @@ public class CompassSensor extends AppCompatActivity implements SensorEventListe
 
 
         //Test to change colour when degree is 360 or 0, aka heading north (own code)
-        if(degree <= 10 || degree >= 350){
+        if(degree <= 15 || degree >= 345){
             //long[] pattern = {0, 100, 1000, 200, 2000};
 
             DegreeTV.setTextColor(Color.parseColor("#F26419"));
 
 
-            if((degree <= 10 || degree >= 350) && (lastDegree > 10 && lastDegree < 350)){
+            if((degree <= 15 || degree >= 345) && (lastDegree > 15 && lastDegree < 345)){
                 //HÄR SKA TTS in
                 if(mTTS.isSpeaking()){
                     mTTS.playSilence(3000,TextToSpeech.QUEUE_FLUSH, null);
