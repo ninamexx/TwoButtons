@@ -4,15 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#86BBD8"
+    android:clickable="false"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/chooseSensor"
+        android:layout_width="239dp"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:text="@string/promt_text"
+        android:textColor="#2F4858"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/compassbutton"
+        android:layout_width="279dp"
+        android:layout_height="186dp"
+
+
+        android:bottomLeftRadius="40dp"
+        android:bottomRightRadius="40dp"
+        android:text="Compass"
+        android:textColor="#F6AE2D"
+        android:topLeftRadius="40dp"
+        android:topRightRadius="40dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <Button
+        android:id="@+id/accbutton"
+        android:layout_width="279dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="16dp"
+        android:background="#33658A"
+        android:bottomLeftRadius="40dp"
+        android:bottomRightRadius="40dp"
+
+        android:text="@string/button_accelerometer"
+        android:textColor="#F6AE2D"
+        android:topLeftRadius="40dp"
+        android:topRightRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.89" />/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
