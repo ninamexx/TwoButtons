@@ -117,6 +117,8 @@ public class AccSensor extends AppCompatActivity implements SensorEventListener 
                         alertIsShowing = true;
                     }
 
+
+
                     vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
                 }else{
                     vibrator.vibrate(500);
